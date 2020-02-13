@@ -5,7 +5,7 @@ Integrantes:
 * Juan Camilo Rojas Ortiz
 * Daniel Felipe Walteros Trujillo
 
-###Descripción (antecedentes, problema que se resuelve, etc.):
+### Descripción (antecedentes, problema que se resuelve, etc.):
 La idea surge de la necesidad de gestionar campeonatos de futbol en entornos pequeños, 
 normalmente en ambientes así se requieren diversas herramientas que lo que hacen es 
 complicar más el asunto, actualmente en la Escuela Colombiana de ingeniería Julio Garavito,
@@ -22,11 +22,11 @@ Como solución a esto se proponen dos puntos clave, a la hora de gestionar el to
 Adicionalmente, desde que inicia el torneo se tendrán estadísticas del progreso de cada equipo
  (no sé si también de los jugadores) para que los espectadores tengan la oportunidad de escoger
   de mejor forma cual partido van a ver y los equipos puedan medir su rendimiento. 
-###Resumen:
+### Resumen:
 My Tourney permitirá a jugadores, árbitros y a espectadores conocer y proporcionar el estado 
 de sus propios partidos, pero además permitirá organizarlos de forma interactiva siendo 
 mucho más rápida de como se hace tradicionalmente. 
-###Historias de usuario:
+### Historias de usuario:
 * Como arbitro quiero notificar algún suceso dentro del partido de forma inmediata para poder dejar claro a todos los participantes (no solo a los espectadores) que ocurrió en el juego. 
 
 * Como administrador quiero organizar las llaves y juegos del torneo de forma más rápida para poder tener más tiempo para administrar los demás recursos del torneo.  
