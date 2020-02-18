@@ -4,6 +4,8 @@ Integrantes:
 * Juan Camilo Angel Hernandez
 * Juan Camilo Rojas Ortiz
 * Daniel Felipe Walteros Trujillo
+### Logo
+![](img/logo.png)
 
 ### Descripción (antecedentes, problema que se resuelve, etc.):
 En el torneo de fútbol de la escuela y en otros torneos pequeños se detectaron varios problemas:
