@@ -169,4 +169,4 @@ Reportando una cambio.
 
 Si ingresa un administrador podrá crear un torneo
 
-![](img/admin.png)
+![](img/admin1.png)
