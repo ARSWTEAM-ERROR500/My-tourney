@@ -208,3 +208,7 @@ Reportando un penalty.
 Si ingresa un administrador podrá crear un torneo
 
 ![](img/admin1.png)
+
+### Backlog
+
+[Link backlog](https://drive.google.com/file/d/1X6ozf47363y226n3friASKwyu2PJWBdv/view?usp=sharing)
