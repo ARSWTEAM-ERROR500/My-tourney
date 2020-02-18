@@ -44,3 +44,129 @@ mucho más rápida de como se hace tradicionalmente.
 * Como jugador quiero conocer las estadísticas de los jugadores para poder conocer mis puntajes, los de mis compañeros y los de mis contrincantes. 
 
 * Como usuario de My Tourney quiero tener un registro en el sistema para poder acceder a las funciones de mi rol. 
+
+
+### Mockups
+
+#### Vista Home
+
+Logeandose
+
+![](img/login.png)
+
+Registrandose
+
+![](img/sign1.png)
+
+Selecciona el rol.
+
+![](img/sign2.png)
+
+Ingresa información adicional.
+
+![](img/sign3.png)
+
+Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y loguearse.
+
+![](img/home.png)
+
+Si selecciona un partido podrá ver el resumen en tiempo real.
+
+![](img/home1.png)
+
+
+Tambien podrá ver información de los jugadores.
+
+![](img/home2.png)
+![](img/home3.png)
+
+Tambien podrá ver información de los equipos.
+
+![](img/home4.png)
+![](img/home5.png)
+
+#### Vista Jugador
+
+La siguiente es la vista que se encontrá un jugador.
+
+
+![](img/player.png)
+
+Si selecciona un partido podrá ver el resumen en tiempo real.
+
+![](img/player1.png)
+
+Tambien podrá ver información de los jugadores.
+
+![](img/player2.png)
+![](img/player3.png)
+
+Tambien podrá ver información de los equipos.
+
+![](img/player4.png)
+![](img/player5.png)
+
+Además podrá ver información de su equipo.
+
+![](img/player6.png)
+
+#### Vista Capitan
+
+Si ingresa un capitan podrá crear un equipo.
+
+![](img/cap.png)
+
+Tambien podrá eliminar y añadir un jugador.
+
+![](img/cap1.png)
+![](img/cap2.png)
+
+Además podrá ver estadisticas de su equipo.
+
+![](img/cap3.png)
+
+#### Vista Arbitro
+
+Si ingresa un arbitro podrá ver sus proximos partidos.
+
+![](img/arb.png)
+
+Tambien podrá reportar un evento como gol, intento de gol, falta, penalty, etc
+
+Selecciona el evento.
+
+![](img/arb1.png)
+
+Reportando un gol.
+
+![](img/arb2.png)
+
+Reportando un intento de gol.
+
+![](img/arb3.png)
+
+Reportando una falta.
+
+![](img/arb4.png)
+
+Reportando una tarjeta amarilla.
+
+![](img/arb5.png)
+
+Reportando una tarjeta roja.
+
+![](img/arb6.png)
+
+Reportando un penalty.
+
+![](img/arb7.png)
+
+Reportando una cambio.
+
+![](img/arb8.png)
+
+#### Vista Administrador
+
+Si ingresa un administrador podrá crear un torneo
+
+![](img/admin.png)
