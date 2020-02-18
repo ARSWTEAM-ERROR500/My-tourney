@@ -33,7 +33,15 @@ se realice antes de la fecha limite de inscripción y antes que se complete el c
 * Generar reportes al finalizar el torneo
 * Generar los enfrentamientos entre los equipos 
 
+#### Diagrama de clases
 
+![](img/clases.png)
+
+#### Diagrama Entidad-Relación
+
+![](img/E-R.png)
+
+ 
 ### Resumen:
 
 Hemos visto que en el torneo de fútbol de la escuela y en otros torneos pequeños se presentan problemas relacionados con el proceso de inscripción, el registro de los datos que se generan durante el torneo, la comunicación de los hechos relevantes que ocurren en el desarrollo del torneo junto con la programación y la visualizacion de las estadísticas.
@@ -41,6 +49,9 @@ Hemos visto que en el torneo de fútbol de la escuela y en otros torneos pequeñ
 Viendo que actualmente se utilizan formularios de Google o planillas para registrar las inscripciones, y  que para informar datos sobre el torneo realizan la pubicación de documentos en una oficina, se propuso una aplicación web que permita administrar un torneo de fútbol, facilitando de esta manera la inscipción de los equipos y la modificación de estos, además mediante la aplicación se podrán  registrar los hechos más importantes para que los usuarios puedan conocer el estado del partido en tiempo real, también podrán visualizar datos de los jugadores y equipos, finalmente se generarán reportes del torneo.
 
 ### Historias de usuario:
+
+![](img/arbitro.png)
+
 * Como arbitro quiero consultar que partidos debo arbitrar para poder asistir a todos a tiempo 
 
 * Como arbitro
@@ -48,12 +59,17 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
   
 * Como arbitro
   Quiero consultar los datos de un jugador
-  Para poder verificar si tiene sanciones por tarjetas amarillas o rojas 
+  Para poder verificar si tiene sanciones por tarjetas amarillas o rojas
+   
+ ![](img/capitan.png)
+ 
   
 * Como capitan
   Quiero registrar mi equipo para poder participar en el torneo
 
 * Como capitan quiero poder añadir o eliminar jugadores de mi equipo  para poder modificar la composicion del equipo en cualquier momento antes de la ficha limite de inscripciones
+
+![](img/usuario.png)
 
 * Como usuario del sistema
   quiero consultar las estadisticas de un jugador para poder informarme del rendimiento de este
@@ -64,6 +80,9 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
 * Como usuario quiero consultar el estado de los partidos del torneo para poder saber rapidamente los resultados de los distintos equipos participantes
 
 * Como usuario quiero consultar las estadisticas de un equipo para poder saber el rendimiento de este
+
+![](img/adminh.png)
+
 
 * Como administrador quiero crear el tornero para poder organizar una competencia y permitir la inscripcion de equipos
 
