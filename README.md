@@ -6,46 +6,66 @@ Integrantes:
 * Daniel Felipe Walteros Trujillo
 
 ### Descripción (antecedentes, problema que se resuelve, etc.):
-La idea surge de la necesidad de gestionar campeonatos de futbol en entornos pequeños, 
-normalmente en ambientes así se requieren diversas herramientas que lo que hacen es 
-complicar más el asunto, actualmente en la Escuela Colombiana de ingeniería Julio Garavito,
- el torneo de sistemas se organiza por medio de diversas herramientas. Pero al desarrollarlo,
-  como solo dura un día y hay 20 equipos, la comunicación del estado actual de todos los partidos
-   es una actividad muy laboriosa para los jugadores, administradores y espectadores.  
+En el torneo de fútbol de la escuela y en otros torneos pequeños se detectaron varios problemas:
+* Uso de mecanismos de inscripción que dificultan o no permiten la validación de algunas restricciones
+ como evitar que un jugador participe en dos equipos al tiempo o evitar equipos repetidos, además 
+ estos mecanismos dificultan la modificación del equipo después del registro,situación
+ que se presenta con frecuencia por la estructura del torneo
+ 
+* Dificultad para registrar diferentes datos durante el torneo, ejemplos de esto son los puntos
+de los equipos, tarjetas,goles y otros sucesos de los partidos.
 
-Como solución a esto se proponen dos puntos clave, a la hora de gestionar el torneo,
- realizarlo por medio de una sola aplicación, disminuyendo de esta manera la cantidad
-  de errores por las diversas herramientas, y durante el desarrollo del torneo tener una
-   plataforma para conocer el estado del partido sin tener que estar vigilando todos los
-    juegos al mismo tiempo. 
+* Dificultad para comunicar los hechos importantes de los partidos, la programación y las estadísticas
+de jugadores y equipos tanto a los participantes como a los espectadores
 
-Adicionalmente, desde que inicia el torneo se tendrán estadísticas del progreso de cada equipo
- (no sé si también de los jugadores) para que los espectadores tengan la oportunidad de escoger
-  de mejor forma cual partido van a ver y los equipos puedan medir su rendimiento. 
+
+Ante estas dificultades actualmente se utilizan formularios de Google o planillas para
+registrar las inscripciones, y para informar datos sobre el torneo o no se tienen mecanismos para esto
+o se publican documentos en las oficinas donde se gestiona el torneo.
+ 
+Para solucionar esto se propone una aplicación web que permita administrar un torneo de fútbol,
+facilitando la creación y aportando un valor agregado al desarrollo y finalización de este.Las principales
+funciones de la aplicación permitirán :
+* La inscipción de los equipos y la modificación de estos siempre y cuando
+se realice antes de la fecha limite de inscripción y antes que se complete el cupo máximo de equipos
+* Registrar los hechos más importantes de los partidos y los resultados de estos .
+* Mostrar a los diferentes usuarios la información de los partidos, de los equipos y de los jugadores del torneo
+* Generar reportes al finalizar el torneo
+* Generar los enfrentamientos entre los equipos 
+
+
 ### Resumen:
 My Tourney permitirá a jugadores, árbitros y a espectadores conocer y proporcionar el estado 
 de sus propios partidos, pero además permitirá organizarlos de forma interactiva siendo 
 mucho más rápida de como se hace tradicionalmente. 
 ### Historias de usuario:
-* Como arbitro quiero notificar algún suceso dentro del partido de forma inmediata para poder dejar claro a todos los participantes (no solo a los espectadores) que ocurrió en el juego. 
+* Como arbitro quiero consultar que partidos debo arbitrar para poder asistir a todos a tiempo 
 
-* Como administrador quiero organizar las llaves y juegos del torneo de forma más rápida para poder tener más tiempo para administrar los demás recursos del torneo.  
+* Como arbitro
+  quiero registrar los sucesos que se presentan en los partidos para poder informar a jugadores,espectadores y otros arbitros sobre lo sucedido 
+  
+* Como arbitro
+  Quiero consultar los datos de un jugador
+  Para poder verificar si tiene sanciones por tarjetas amarillas o rojas 
+  
+* Como capitan
+  Quiero registrar mi equipo para poder participar en el torneo
 
-* Como capitán de un equipo quiero registrar la participación de mi equipo para poder participar en el torneo. 
+* Como capitan quiero poder añadir o eliminar jugadores de mi equipo  para poder modificar la composicion del equipo en cualquier momento antes de la ficha limite de inscripciones
 
-* Como capitán de un equipo quiero modificar la composición de mi equipo cuando ocurran imprevistos para que mi equipo pueda participar en el torneo sin retrasos ni sanciones. 
+* Como usuario del sistema
+  quiero consultar las estadisticas de un jugador para poder informarme del rendimiento de este
 
-* Como espectador quiero conocer el estado de otros partidos además del que estoy viendo para poder tener más tiempo viendo los partidos que quiero, en vez de perderlo preguntando qué ha sucedido con los demás partidos. 
+* Como usuario del sistema 
+  quiero consultar los sucesos que ocurrieron en un partido para poder saber de forma rapida lo mas importante del partido
 
-* Como jugador quiero conocer el estado de otros partidos para poder saber contra quien me voy a enfrentar sin perder el poco tiempo de descanso que poseo. 
+* Como usuario quiero consultar el estado de los partidos del torneo para poder saber rapidamente los resultados de los distintos equipos participantes
 
-* Como capitán quiero conocer las estadísticas básicas de mi equipo para poder medir el rendimiento y tomar las medidas necesarias. 
+* Como usuario quiero consultar las estadisticas de un equipo para poder saber el rendimiento de este
 
-* Como jugador quiero conocer las estadísticas de los jugadores para poder conocer mis puntajes, los de mis compañeros y los de mis contrincantes. 
+* Como administrador quiero crear el tornero para poder organizar una competencia y permitir la inscripcion de equipos
 
-* Como usuario de My Tourney quiero tener un registro en el sistema para poder acceder a las funciones de mi rol. 
-
-
+* Como administrador quiero organizar los enfrentamientos entre los equipos para poder definir los partidos que se van a jugar en el torneo
 ### Mockups
 
 #### Vista Home
