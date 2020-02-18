@@ -202,9 +202,6 @@ Reportando un penalty.
 
 ![](img/arb7.png)
 
-Reportando una cambio.
-
-![](img/arb8.png)
 
 #### Vista Administrador
 
