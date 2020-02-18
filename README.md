@@ -35,9 +35,11 @@ se realice antes de la fecha limite de inscripción y antes que se complete el c
 
 
 ### Resumen:
-My Tourney permitirá a jugadores, árbitros y a espectadores conocer y proporcionar el estado 
-de sus propios partidos, pero además permitirá organizarlos de forma interactiva siendo 
-mucho más rápida de como se hace tradicionalmente. 
+
+Hemos visto que en el torneo de fútbol de la escuela y en otros torneos pequeños se presentan problemas relacionados con el proceso de inscripción, el registro de los datos que se generan durante el torneo, la comunicación de los hechos relevantes que ocurren en el desarrollo del torneo junto con la programación y la visualizacion de las estadísticas.
+
+Viendo que actualmente se utilizan formularios de Google o planillas para registrar las inscripciones, y  que para informar datos sobre el torneo realizan la pubicación de documentos en una oficina, se propuso una aplicación web que permita administrar un torneo de fútbol, facilitando de esta manera la inscipción de los equipos y la modificación de estos, además mediante la aplicación se podrán  registrar los hechos más importantes para que los usuarios puedan conocer el estado del partido en tiempo real, también podrán visualizar datos de los jugadores y equipos, finalmente se generarán reportes del torneo.
+
 ### Historias de usuario:
 * Como arbitro quiero consultar que partidos debo arbitrar para poder asistir a todos a tiempo 
 
