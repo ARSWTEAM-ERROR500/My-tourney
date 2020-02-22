@@ -31,19 +31,9 @@ funciones de la aplicación permitirán :
 * La inscipción de los equipos y la modificación de estos siempre y cuando
 se realice antes de la fecha limite de inscripción y antes que se complete el cupo máximo de equipos
 * Registrar los hechos más importantes de los partidos y los resultados de estos .
-* Mostrar a los diferentes usuarios la información de los partidos, de los equipos y de los jugadores del torneo
+* Mostrar a los diferentes usuarios la información de los partidos
 * Generar reportes al finalizar el torneo
-* Generar los enfrentamientos entre los equipos 
 
-#### Diagrama de clases
-
-![](img/clases.png)
-
-#### Diagrama Entidad-Relación
-
-![](img/E-R.png)
-
- 
 ### Resumen:
 
 Hemos visto que en el torneo de fútbol de la escuela y en otros torneos pequeños se presentan problemas relacionados con el proceso de inscripción, el registro de los datos que se generan durante el torneo, la comunicación de los hechos relevantes que ocurren en el desarrollo del torneo junto con la programación y la visualizacion de las estadísticas.
@@ -89,8 +79,27 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
 * Como administrador quiero crear el tornero para poder organizar una competencia y permitir la inscripcion de equipos
 
 * Como administrador quiero organizar los enfrentamientos entre los equipos para poder definir los partidos que se van a jugar en el torneo
-### Mockups
 
+![](img/jugador.png)
+* Como jugador quiero registrarme en el sistema para poder ser inscrito en algun equipo
+
+
+#### Diagrama de clases
+
+![](img/clases.png)
+
+#### Diagrama Entidad-Relación
+
+![](img/E-R.png)
+
+### Diagrama de componentes
+
+![](img/componentes.png)
+
+ 
+
+
+### Mockups
 #### Vista Home
 
 Logeandose
