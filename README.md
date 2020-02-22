@@ -98,7 +98,7 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
 
 ### Backlog-Taiga
 
-[Enlace Taiga](https://tree.taiga.io/project/silenrate-my-tourney/backlog)
+![Enlace Taiga](https://tree.taiga.io/project/silenrate-my-tourney/backlog)
 
 
 ### Mockups
@@ -106,121 +106,65 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
 
 Logeandose
 
-![](img/login.png)
+![](mocks/login.png)
 
 Registrandose
 
-![](img/sign1.png)
+![](mocks/sign.png)
 
-Selecciona el rol.
 
-![](img/sign2.png)
+Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y registrarse como jugador.
 
-Ingresa información adicional.
-
-![](img/sign3.png)
-
-Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y loguearse.
-
-![](img/home.png)
+![](mocks/home.png)
 
 Si selecciona un partido podrá ver el resumen en tiempo real.
 
-![](img/home1.png)
+![](mocks/home1.png)
 
+Si selecciona la opcion de registrarse como jugador aparecerá el siguiente formulario.
 
-Tambien podrá ver información de los jugadores.
-
-![](img/home2.png)
-![](img/home3.png)
-
-Tambien podrá ver información de los equipos.
-
-![](img/home4.png)
-![](img/home5.png)
-
-#### Vista Jugador
-
-La siguiente es la vista que se encontrá un jugador.
-
-
-![](img/player.png)
-
-Si selecciona un partido podrá ver el resumen en tiempo real.
-
-![](img/player1.png)
-
-Tambien podrá ver información de los jugadores.
-
-![](img/player2.png)
-![](img/player3.png)
-
-Tambien podrá ver información de los equipos.
-
-![](img/player4.png)
-![](img/player5.png)
-
-Además podrá ver información de su equipo.
-
-![](img/player6.png)
+![](mocks/repla.png)
 
 #### Vista Capitan
 
 Si ingresa un capitan podrá crear un equipo.
 
-![](img/cap.png)
+![](mocks/cap1.png)
 
-Tambien podrá eliminar y añadir un jugador.
+Tambien podrá añadir un jugador.
 
-![](img/cap1.png)
-![](img/cap2.png)
+![](mocks/cap2.png)
 
-Además podrá ver estadisticas de su equipo.
+Primero selecciona la posición y luego el jugador que desea añadir en esa posición.
 
-![](img/cap3.png)
+![](mocks/cap3.png)
+
+Tambien podrá eliminar un jugador seleccionándolo.
+
+![](mocks/cap4.png)
 
 #### Vista Arbitro
 
 Si ingresa un arbitro podrá ver sus proximos partidos.
 
-![](img/arb.png)
+![](mocks/arb.png)
 
-Tambien podrá reportar un evento como gol, intento de gol, falta, penalty, etc
+Tambien podrá reportar un evento como gol, tarjeta amarilla o roja.
+
+Selecciona el jugador.
+
+![](mocks/arb1.png)
 
 Selecciona el evento.
 
-![](img/arb1.png)
-
-Reportando un gol.
-
-![](img/arb2.png)
-
-Reportando un intento de gol.
-
-![](img/arb3.png)
-
-Reportando una falta.
-
-![](img/arb4.png)
-
-Reportando una tarjeta amarilla.
-
-![](img/arb5.png)
-
-Reportando una tarjeta roja.
-
-![](img/arb6.png)
-
-Reportando un penalty.
-
-![](img/arb7.png)
+![](mocks/arb2.png)
 
 
 #### Vista Administrador
 
 Si ingresa un administrador podrá crear un torneo
 
-![](img/admin1.png)
+![](mocks/admin.png)
 
 ### Backlog
 
