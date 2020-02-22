@@ -96,7 +96,9 @@ Viendo que actualmente se utilizan formularios de Google o planillas para regist
 
 ![](img/componentes.png)
 
- 
+### Backlog-Taiga
+
+![Enlace Taiga](https://tree.taiga.io/project/silenrate-my-tourney/backlog)
 
 
 ### Mockups
