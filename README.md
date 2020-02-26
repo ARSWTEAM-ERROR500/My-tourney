@@ -112,18 +112,18 @@ Registrandose
 
 ![](mocks/sign.png)
 
+Selecciona su rol.
 
-Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y registrarse como jugador.
+![](mocks/role.png)
 
-![](mocks/home.png)
+Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y loguearse.
+
+![](mocks/nhome.png)
 
 Si selecciona un partido podrá ver el resumen en tiempo real.
 
-![](mocks/home1.png)
+![](mocks/nhome1.png)
 
-Si selecciona la opcion de registrarse como jugador aparecerá el siguiente formulario.
-
-![](mocks/repla.png)
 
 #### Vista Capitan
 
@@ -164,7 +164,11 @@ Selecciona el evento.
 
 Si ingresa un administrador podrá crear un torneo
 
-![](mocks/admin.png)
+![](mocks/nad.png)
+
+Además podra añadir un arbitro.
+
+![](mocks/addrefe.png)
 
 ### Backlog
 
