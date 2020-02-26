@@ -116,6 +116,10 @@ Selecciona su rol.
 
 ![](mocks/role.png)
 
+Se registra.
+
+![](mocks/repla.png)
+
 Apenas ingresa un usuario se encontrará con la siguiente vista donde podrá obsevar el estado de los partidos y loguearse.
 
 ![](mocks/nhome.png)
