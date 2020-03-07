@@ -3,6 +3,7 @@ package arsw.mytourney.persistence.impl;
 import arsw.mytourney.model.Equipo;
 import arsw.mytourney.model.Jugador;
 import arsw.mytourney.model.Partido;
+import arsw.mytourney.model.Torneo;
 import arsw.mytourney.persistence.MyTourneyException;
 import arsw.mytourney.persistence.MyTourneyPersistence;
 import org.springframework.stereotype.Service;
@@ -39,7 +40,7 @@ public class InMemoryMyTourneyPersistence implements MyTourneyPersistence {
      * @throws MyTourneyException
      */
     @Override
-    public Equipo consultarEquipo(int id) throws MyTourneyException {
+    public Equipo consultarEquipo(Long id) throws MyTourneyException {
         throw new MyTourneyException("En construccion");
     }
 
@@ -50,7 +51,7 @@ public class InMemoryMyTourneyPersistence implements MyTourneyPersistence {
      * @throws MyTourneyException
      */
     @Override
-    public Jugador consultarJugador(int id) throws MyTourneyException {
+    public Jugador consultarJugador(Long id) throws MyTourneyException {
         throw new MyTourneyException("En construccion");
     }
 
@@ -66,11 +67,11 @@ public class InMemoryMyTourneyPersistence implements MyTourneyPersistence {
 
     /**
      * Elimina un jugador de un equipo, si aun se está dentro del plazo de tiempo
-     * @param jugador
+     * @param jugadorId
      * @throws MyTourneyException
      */
     @Override
-    public void eliminarJugadorDeUnEquipo(Jugador jugador) throws MyTourneyException {
+    public void eliminarJugadorDeUnEquipo(Long jugadorId) throws MyTourneyException {
         throw new MyTourneyException("En construccion");
     }
 
@@ -81,7 +82,7 @@ public class InMemoryMyTourneyPersistence implements MyTourneyPersistence {
      * @throws MyTourneyException
      */
     @Override
-    public Partido consultarPartido(int id) throws MyTourneyException {
+    public Partido consultarPartido(Long id) throws MyTourneyException {
         throw new MyTourneyException("En construccion");
     }
 
@@ -102,6 +103,27 @@ public class InMemoryMyTourneyPersistence implements MyTourneyPersistence {
      */
     @Override
     public List<Partido> consultarPartidosPorArbitro() throws MyTourneyException {
+        throw new MyTourneyException("En construccion");
+    }
+
+    /**
+     * Consulta un torneo en la base de datos
+     * @param torneoId
+     * @return
+     * @throws MyTourneyException
+     */
+    @Override
+    public Torneo consultarTorneo(Long torneoId) throws MyTourneyException {
+        throw new MyTourneyException("En construccion");
+    }
+
+    /**
+     * Crea un torneo dentro de la base de datos
+     * @param torneo
+     * @throws MyTourneyException
+     */
+    @Override
+    public void crearTorneo(Torneo torneo) throws MyTourneyException {
         throw new MyTourneyException("En construccion");
     }
 }
