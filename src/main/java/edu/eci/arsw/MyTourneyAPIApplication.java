@@ -1,11 +1,12 @@
-package arsw.mytourneyapi;
+package edu.eci.arsw.mytourneyapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"arsw.mytourney"})
+@EnableJpaRepositories
 public class MyTourneyAPIApplication {
 
 

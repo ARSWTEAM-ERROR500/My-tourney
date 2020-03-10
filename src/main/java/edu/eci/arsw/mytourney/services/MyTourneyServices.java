@@ -1,19 +1,15 @@
-package arsw.mytourney.services;
+package edu.arsw.mytourney.services;
 
-import arsw.mytourney.model.Equipo;
-import arsw.mytourney.model.Jugador;
-import arsw.mytourney.model.Partido;
-import arsw.mytourney.model.Torneo;
-import arsw.mytourney.persistence.MyTourneyException;
-import arsw.mytourney.persistence.MyTourneyPersistence;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import edu.arsw.mytourney.model.Equipo;
+import edu.arsw.mytourney.model.Jugador;
+import edu.arsw.mytourney.model.Partido;
+import edu.arsw.mytourney.model.Torneo;
+import edu.arsw.mytourney.persistence.MyTourneyException;
 
-@Service
 public class MyTourneyServices {
 
-    @Autowired
-    private MyTourneyPersistence mtp = null;
+    //@Autowired
+   // private MyTourneyPersistence mtp = null;
 
     /**
      * Consulta un torneo en la base de datos
@@ -22,7 +18,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public Torneo getTorneo(Long torneoId) throws MyTourneyException {
-        return mtp.consultarTorneo(torneoId);
+        return null;
     }
 
     /**
@@ -32,7 +28,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public Equipo getEquipo(Long equipoId) throws MyTourneyException {
-        return mtp.consultarEquipo(equipoId);
+        return null;
     }
 
     /**
@@ -42,7 +38,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public Jugador getJugador(Long jugadorId) throws MyTourneyException {
-        return mtp.consultarJugador(jugadorId);
+        return null;
     }
 
     /**
@@ -52,7 +48,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public Partido getPartido(Long partidoId) throws MyTourneyException {
-        return mtp.consultarPartido(partidoId);
+        return null;
     }
 
     /**
@@ -61,7 +57,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void crearTorneo(Torneo torneo) throws MyTourneyException {
-        mtp.crearTorneo(torneo);
+       ;
     }
 
     /**
@@ -70,7 +66,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void crearEquipo(Equipo equipo) throws MyTourneyException {
-        mtp.registroEquipo(equipo);
+        ;
     }
 
     /**
@@ -79,7 +75,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void crearPartido(Partido partido) throws MyTourneyException {
-        mtp.registroPartido(partido);
+       ;
     }
 
     /**
@@ -88,7 +84,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void addPlayer(Jugador jugador) throws MyTourneyException {
-        mtp.registroJugador(jugador);
+        ;
     }
 
     /**
@@ -97,7 +93,7 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void modifyPlayer(Jugador jugador) throws MyTourneyException {
-        mtp.modificarJugadorDeUnEquipo(jugador);
+       ;
     }
 
     /**
@@ -106,6 +102,6 @@ public class MyTourneyServices {
      * @throws MyTourneyException
      */
     public void deletePlayer(Long jugadorId) throws MyTourneyException {
-        mtp.eliminarJugadorDeUnEquipo(jugadorId);
+       ;
     }
 }

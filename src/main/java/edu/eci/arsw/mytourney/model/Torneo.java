@@ -1,4 +1,4 @@
-package arsw.mytourney.model;
+package edu.arsw.mytourney.model;
 
 import java.util.ArrayList;
 
