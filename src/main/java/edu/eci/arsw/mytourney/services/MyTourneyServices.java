@@ -59,7 +59,7 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
          //   Equipo equipo= equipoRepository.findById(nombreEquipo).get();
             //equipo.quitarJugador(Jugador);
 
-        }
+        //}
     }
 
 }
