@@ -1,4 +1,4 @@
-package edu.arsw.mytourney.persistence;
+package edu.eci.arsw.mytourney.persistence;
 
 public class MyTourneyException extends Exception{
 

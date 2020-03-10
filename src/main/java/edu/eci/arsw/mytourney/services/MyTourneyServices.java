@@ -1,107 +1,65 @@
-package edu.arsw.mytourney.services;
+package edu.eci.arsw.mytourney.services;
 
-import edu.arsw.mytourney.model.Equipo;
-import edu.arsw.mytourney.model.Jugador;
-import edu.arsw.mytourney.model.Partido;
-import edu.arsw.mytourney.model.Torneo;
-import edu.arsw.mytourney.persistence.MyTourneyException;
+import edu.eci.arsw.mytourney.model.Equipo;
+import edu.eci.arsw.mytourney.model.Jugador;
+import edu.eci.arsw.mytourney.model.Partido;
+import edu.eci.arsw.mytourney.model.Torneo;
+import edu.eci.arsw.mytourney.persistence.EquipoRepository;
+import edu.eci.arsw.mytourney.persistence.MyTourneyException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class MyTourneyServices {
+import java.util.List;
 
-    //@Autowired
-   // private MyTourneyPersistence mtp = null;
+@Service
+public class MyTourneyServices implements MyTourneyServicesInterface {
 
-    /**
-     * Consulta un torneo en la base de datos
-     * @param torneoId
-     * @return
-     * @throws MyTourneyException
-     */
-    public Torneo getTorneo(Long torneoId) throws MyTourneyException {
+    @Autowired
+    private EquipoRepository equipoRepository = null;
+
+
+    @Override
+    public Torneo getTorneo() throws MyTourneyException {
         return null;
     }
 
-    /**
-     * Consulta un equipo dentro de la base de datos
-     * @param equipoId
-     * @return
-     * @throws MyTourneyException
-     */
-    public Equipo getEquipo(Long equipoId) throws MyTourneyException {
+    @Override
+    public Equipo getEquipo(String nombre) throws MyTourneyException {
         return null;
     }
 
-    /**
-     * Consulta un jugador de un equipo dentro de la base de datos
-     * @param jugadorId
-     * @return
-     * @throws MyTourneyException
-     */
-    public Jugador getJugador(Long jugadorId) throws MyTourneyException {
-        return null;
+    @Override
+    public List<Equipo> getEquipos() throws MyTourneyException {
+        List<Equipo> equipos=equipoRepository.findAll();
+        return equipos;
     }
 
-    /**
-     * Consulta un partido del Torneo dentro de la base de datos
-     * @param partidoId
-     * @return
-     * @throws MyTourneyException
-     */
-    public Partido getPartido(Long partidoId) throws MyTourneyException {
-        return null;
+    @Override
+    public void registrarJugador(Jugador jugador) throws MyTourneyException {
+
     }
 
-    /**
-     * Crea un torneo dentro de la base de datos
-     * @param torneo
-     * @throws MyTourneyException
-     */
-    public void crearTorneo(Torneo torneo) throws MyTourneyException {
-       ;
-    }
-
-    /**
-     * Registra un equipo dentro del torneo
-     * @param equipo
-     * @throws MyTourneyException
-     */
+    @Override
     public void crearEquipo(Equipo equipo) throws MyTourneyException {
-        ;
+        equipoRepository.save(equipo);
     }
 
-    /**
-     * Registra a un equipo dentro del Torneo
-     * @param partido
-     * @throws MyTourneyException
-     */
-    public void crearPartido(Partido partido) throws MyTourneyException {
-       ;
+    @Override
+    public void addPlayerToTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+        if(equipoRepository.existsById(nombreEquipo)){
+            Equipo equipo= equipoRepository.findById(nombreEquipo).get();
+            equipo.agregarJugador(jugador);
+            equipoRepository.save(equipo);
+        }
     }
 
-    /**
-     * Registra un jugador de un equipo dentro del torneo
-     * @param jugador
-     * @throws MyTourneyException
-     */
-    public void addPlayer(Jugador jugador) throws MyTourneyException {
-        ;
+    @Override
+    public void removePlayerFromTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+        //if(equipoRepository.existsById(nombreEquipo)){
+         //   Equipo equipo= equipoRepository.findById(nombreEquipo).get();
+            //equipo.quitarJugador(Jugador);
+
+        }
     }
 
-    /**
-     * Modifica los datos de un integrante de un equipo del Torneo, si aun se está dentro del plazo de tiempo
-     * @param jugador
-     * @throws MyTourneyException
-     */
-    public void modifyPlayer(Jugador jugador) throws MyTourneyException {
-       ;
-    }
-
-    /**
-     * Elimina un jugador de un equipo, si aun se está dentro del plazo de tiempo
-     * @param jugadorId
-     * @throws MyTourneyException
-     */
-    public void deletePlayer(Long jugadorId) throws MyTourneyException {
-       ;
-    }
 }

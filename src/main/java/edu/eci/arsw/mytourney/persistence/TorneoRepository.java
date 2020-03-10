@@ -1,4 +1,7 @@
 package edu.eci.arsw.mytourney.persistence;
 
-public interface TorneoRepository {
+import edu.eci.arsw.mytourney.model.Torneo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TorneoRepository extends JpaRepository<Torneo,Integer> {
 }

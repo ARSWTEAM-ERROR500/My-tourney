@@ -1,4 +1,6 @@
-package edu.arsw.mytourney.model;
+package edu.eci.arsw.mytourney.model;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
@@ -12,9 +14,13 @@ public class Jugador {
     private String nombre;
     @ManyToOne
     @JoinColumn(name="fk_equipo")
+    @JsonBackReference
     private Equipo equipo;
 
     public Jugador() {
+    }
+    public Jugador(String nombre){
+        this.nombre=nombre;
     }
 
     public int getId() {
