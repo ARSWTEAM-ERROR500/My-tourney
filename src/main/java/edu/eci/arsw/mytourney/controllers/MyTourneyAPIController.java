@@ -19,7 +19,7 @@ public class MyTourneyAPIController {
     private MyTourneyServicesInterface services;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> GetAllTeams(){
+    public ResponseEntity<?> getAllTeams(){
         try {
             return new ResponseEntity<>(services.getEquipos(), HttpStatus.ACCEPTED);
         } catch (Exception e) {
@@ -28,7 +28,7 @@ public class MyTourneyAPIController {
         }
     }
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> AddNewTeam(@RequestBody Equipo newtm){
+    public ResponseEntity<?> addNewTeam(@RequestBody Equipo newtm){
         try {
             services.crearEquipo(newtm);
             return new ResponseEntity<>(HttpStatus.CREATED);
@@ -40,7 +40,7 @@ public class MyTourneyAPIController {
     }
 
     @RequestMapping(path = "/{nombre}",method = RequestMethod.PUT)
-    public ResponseEntity<?> PutBlueprint(@PathVariable ("nombre") String nombre, @RequestBody Jugador jugador ){
+    public ResponseEntity<?> addPlayerToTeam(@PathVariable ("nombre") String nombre, @RequestBody Jugador jugador ){
         try {
             services.addPlayerToTeam(jugador,nombre);
             return new ResponseEntity<>(HttpStatus.CREATED);
