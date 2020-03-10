@@ -1,4 +1,4 @@
-package edu.arsw.mytourney;
+package edu.eci.arsw.mytourney;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
