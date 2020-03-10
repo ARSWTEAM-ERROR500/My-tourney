@@ -42,7 +42,7 @@ public class MyTourneyAPIController {
     @RequestMapping(path = "/{nombre}",method = RequestMethod.PUT)
     public ResponseEntity<?> PutBlueprint(@PathVariable ("nombre") String nombre, @RequestBody Jugador jugador ){
         try {
-            services.addPlayer(jugador,nombre);
+            services.addPlayerToTeam(jugador,nombre);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch ( MyTourneyException ex) {
             Logger.getLogger(MyTourneyAPIController.class.getName()).log(Level.SEVERE, null, ex);
