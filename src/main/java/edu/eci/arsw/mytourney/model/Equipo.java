@@ -1,7 +1,6 @@
 package edu.eci.arsw.mytourney.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,6 @@ public class Equipo {
     @ManyToOne
     @JoinColumn(name="fk_torneo")
     private Torneo torneo;
-
 
     public Equipo() {
     }

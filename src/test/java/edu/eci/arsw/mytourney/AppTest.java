@@ -1,38 +1,30 @@
 package edu.eci.arsw.mytourney;
 
-import junit.framework.Test;
+import edu.eci.arsw.mytourney.model.Usuario;
+import edu.eci.arsw.mytourney.persistence.UsuarioRepository;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.test.context.junit4.SpringRunner;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class AppTest extends TestCase {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    //@Autowired
+    //private BCryptPasswordEncoder encoder;
+
+    @Test
+    public void crearUsuarioTest(){
+        Usuario usuario = new Usuario(1,"prueba","$2a$10$Jv4wBbtFju3xPJbpVdfCCOKv1r.tpDctI8tJ7/DWHuuDRgoP227SW");
+        //Usuario usuarioRegistrado = usuarioRepository.save(usuario);
+        //assertEquals(usuario,usuarioRegistrado);
     }
 }
