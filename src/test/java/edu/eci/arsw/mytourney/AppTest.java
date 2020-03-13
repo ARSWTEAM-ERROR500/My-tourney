@@ -23,8 +23,12 @@ public class AppTest extends TestCase {
 
     @Test
     public void crearUsuarioTest(){
-        Usuario usuario = new Usuario(1,"prueba","$2a$10$Jv4wBbtFju3xPJbpVdfCCOKv1r.tpDctI8tJ7/DWHuuDRgoP227SW");
+        Usuario usuario = new Usuario(1,"capitan","$2a$10$Jv4wBbtFju3xPJbpVdfCCOKv1r.tpDctI8tJ7/DWHuuDRgoP227SW","Capitan");
+        Usuario usuario2 = new Usuario(2,"jugador","$2a$10$Jv4wBbtFju3xPJbpVdfCCOKv1r.tpDctI8tJ7/DWHuuDRgoP227SW","Jugador");
+        Usuario usuario3 = new Usuario(3,"arbitro","$2a$10$Jv4wBbtFju3xPJbpVdfCCOKv1r.tpDctI8tJ7/DWHuuDRgoP227SW","Arbitro");
         //Usuario usuarioRegistrado = usuarioRepository.save(usuario);
+        //usuarioRepository.save(usuario2);
+        //usuarioRepository.save(usuario3);
         //assertEquals(usuario,usuarioRegistrado);
     }
 }

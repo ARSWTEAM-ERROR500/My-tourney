@@ -12,14 +12,20 @@ public class Usuario {
 
     private String nombre;
     private String clave;
+    private String rol;
 
-    public Usuario(int id, String nombre, String clave) {
+    public Usuario(int id, String nombre, String clave, String rol) {
         this.id = id;
         this.nombre = nombre;
         this.clave = clave;
+        this.rol = rol;
     }
 
     public Usuario() {
+    }
+
+    public String getRol() {
+        return rol;
     }
 
     public int getId() {
@@ -56,6 +62,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "nombre: "+nombre+", clave:"+clave;
+        return "nombre: "+nombre+", rol: "+rol+", clave:"+clave;
     }
 }
