@@ -22,7 +22,7 @@ public interface MyTourneyServicesInterface {
 
     public void addPlayerToTeam(Jugador jugador,String nombreEquipo) throws MyTourneyException ;
 
-    public void removePlayerFromTeam(Jugador jugador,String nombreEquipo)throws MyTourneyException;
+    public void removePlayerFromTeam(int jugadorid,String nombreEquipo)throws MyTourneyException;
 
 
 
