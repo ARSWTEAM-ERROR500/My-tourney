@@ -17,7 +17,6 @@ public class Equipo {
     @JoinColumn(name="fk_torneo")
     private Torneo torneo;
 
-
     public Equipo() {
     }
     public Equipo(String nombre,List<Jugador> jugadores){

@@ -3,6 +3,8 @@ package edu.eci.arsw.mytourney.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.util.LinkedList;
+import java.util.List;
 
 @Entity
 public class Jugador {
@@ -16,11 +18,14 @@ public class Jugador {
     @JoinColumn(name="fk_equipo")
     @JsonBackReference
     private Equipo equipo;
+    @OneToMany(mappedBy = "jugador",cascade = CascadeType.ALL)
+    private List<Evento> estadisticas;
 
     public Jugador() {
     }
     public Jugador(String nombre){
         this.nombre=nombre;
+        estadisticas=new LinkedList<Evento>();
     }
 
     public int getId() {
