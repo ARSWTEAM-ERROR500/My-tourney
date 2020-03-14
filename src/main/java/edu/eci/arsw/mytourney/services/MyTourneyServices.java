@@ -25,7 +25,11 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
 
     @Override
     public Equipo getEquipo(String nombre) throws MyTourneyException {
-        return null;
+        Equipo equipo=null;
+        if(equipoRepository.existsById(nombre)){
+            equipo=equipoRepository.findById(nombre).get();
+        }
+        return equipo;
     }
 
     @Override
@@ -54,7 +58,7 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
     }
 
     @Override
-    public void removePlayerFromTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+    public void removePlayerFromTeam(int jugador, String nombreEquipo) throws MyTourneyException {
         //if(equipoRepository.existsById(nombreEquipo)){
          //   Equipo equipo= equipoRepository.findById(nombreEquipo).get();
             //equipo.quitarJugador(Jugador);
