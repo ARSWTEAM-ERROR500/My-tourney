@@ -5,9 +5,11 @@ import edu.eci.arsw.mytourney.persistence.JugadorRepository;
 import edu.eci.arsw.mytourney.persistence.MyTourneyException;
 import edu.eci.arsw.mytourney.services.JugadoresServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class JugadoresServicesImpl implements JugadoresServices {
     @Autowired
     JugadorRepository jugadorRepository=null;
