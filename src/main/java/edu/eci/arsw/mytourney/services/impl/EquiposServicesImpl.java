@@ -1,27 +1,24 @@
-package edu.eci.arsw.mytourney.services;
+package edu.eci.arsw.mytourney.services.impl;
 
 import edu.eci.arsw.mytourney.model.Equipo;
 import edu.eci.arsw.mytourney.model.Jugador;
-import edu.eci.arsw.mytourney.model.Partido;
-import edu.eci.arsw.mytourney.model.Torneo;
 import edu.eci.arsw.mytourney.persistence.EquipoRepository;
+import edu.eci.arsw.mytourney.persistence.JugadorRepository;
 import edu.eci.arsw.mytourney.persistence.MyTourneyException;
+import edu.eci.arsw.mytourney.services.EquiposServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class MyTourneyServices implements MyTourneyServicesInterface {
-
+public class EquiposServicesImpl implements EquiposServices {
     @Autowired
     private EquipoRepository equipoRepository = null;
 
+    @Autowired
+    private JugadorRepository jugadorRepository=null;
 
-    @Override
-    public Torneo getTorneo() throws MyTourneyException {
-        return null;
-    }
 
     @Override
     public Equipo getEquipo(String nombre) throws MyTourneyException {
@@ -39,11 +36,6 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
     }
 
     @Override
-    public void registrarJugador(Jugador jugador) throws MyTourneyException {
-
-    }
-
-    @Override
     public void crearEquipo(Equipo equipo) throws MyTourneyException {
         equipoRepository.save(equipo);
     }
@@ -55,15 +47,24 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
             equipo.agregarJugador(jugador);
             equipoRepository.save(equipo);
         }
+
     }
 
     @Override
-    public void removePlayerFromTeam(int jugador, String nombreEquipo) throws MyTourneyException {
-        //if(equipoRepository.existsById(nombreEquipo)){
-         //   Equipo equipo= equipoRepository.findById(nombreEquipo).get();
-            //equipo.quitarJugador(Jugador);
-
-        //}
+    public void removePlayerFromTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+        if(equipoRepository.existsById(nombreEquipo) ){
+            Equipo equipo= equipoRepository.findById(nombreEquipo).get();
+            equipo.quitarJugador(jugador);
+            equipoRepository.save(equipo);
+            jugadorRepository.save(jugador);
+        }
     }
 
+    @Override
+    public void eliminarEquipo(String nombreEquipo) throws MyTourneyException {
+        if(equipoRepository.existsById(nombreEquipo)){
+            Equipo equipo=equipoRepository.findById(nombreEquipo).get();
+            equipoRepository.delete(equipo);
+        }
+    }
 }

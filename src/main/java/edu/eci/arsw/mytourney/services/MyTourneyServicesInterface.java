@@ -12,17 +12,12 @@ public interface MyTourneyServicesInterface {
 
     public Torneo getTorneo()throws MyTourneyException;
 
-    public Equipo getEquipo(String nombre) throws MyTourneyException;
+    public List<Jugador>getJugadores()throws MyTourneyException;
 
-    public List<Equipo> getEquipos()throws MyTourneyException;
+    public List<Jugador>getJugadorByName(String name)throws MyTourneyException;
 
     public void registrarJugador(Jugador jugador)throws MyTourneyException;
 
-    public void crearEquipo(Equipo equipo) throws MyTourneyException ;
-
-    public void addPlayerToTeam(Jugador jugador,String nombreEquipo) throws MyTourneyException ;
-
-    public void removePlayerFromTeam(int jugadorid,String nombreEquipo)throws MyTourneyException;
 
 
 

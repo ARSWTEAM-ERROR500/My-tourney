@@ -49,4 +49,9 @@ public class Equipo {
         jugador.setEquipo(this);
         jugadores.add(jugador);
     }
+
+    public void quitarJugador(Jugador jugador) {
+        jugador.setEquipo(null);
+        jugadores.remove(jugador);
+    }
 }
