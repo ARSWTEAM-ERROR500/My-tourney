@@ -63,8 +63,7 @@ public class EquiposServicesImpl implements EquiposServices {
     @Override
     public void eliminarEquipo(String nombreEquipo) throws MyTourneyException {
         if(equipoRepository.existsById(nombreEquipo)){
-            Equipo equipo=equipoRepository.findById(nombreEquipo).get();
-            equipoRepository.delete(equipo);
+            equipoRepository.deleteById(nombreEquipo);
         }
     }
 }

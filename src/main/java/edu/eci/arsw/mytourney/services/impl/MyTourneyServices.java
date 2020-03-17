@@ -32,22 +32,4 @@ public class MyTourneyServices implements MyTourneyServicesInterface {
         return null;
     }
 
-    @Override
-    public List<Jugador> getJugadores() throws MyTourneyException {
-        List<Jugador>jugadores=jugadorRepository.findAll();
-        return jugadores;
-    }
-
-    @Override
-    public List<Jugador> getJugadorByName(String name) throws MyTourneyException {
-        List<Jugador>jugadores=jugadorRepository.findByNombreEquals(name);
-        return jugadores;
-    }
-
-
-    @Override
-    public void registrarJugador(Jugador jugador) throws MyTourneyException {
-        jugadorRepository.save(jugador);
-    }
-
 }
