@@ -51,4 +51,12 @@ public class Jugador {
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
+
+    public List<Evento> getEstadisticas() {
+        return estadisticas;
+    }
+
+    public void setEstadisticas(List<Evento> estadisticas) {
+        this.estadisticas = estadisticas;
+    }
 }
