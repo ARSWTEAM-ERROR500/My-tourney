@@ -1,9 +1,7 @@
 package edu.eci.arsw.mytourney.controllers;
 
-import edu.eci.arsw.mytourney.model.Jugador;
-import edu.eci.arsw.mytourney.model.Usuario;
-import edu.eci.arsw.mytourney.persistence.MyTourneyException;
-import edu.eci.arsw.mytourney.services.impl.UserServicesImpl;
+import edu.eci.arsw.mytourney.model.Torneo;
+import edu.eci.arsw.mytourney.services.TorneoServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,20 +14,32 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping(value = "/usuarios")
-public class UserAPIController {
+@RequestMapping(value = "/torneo")
+public class TorneoAPIController {
 
     @Autowired
-    UserServicesImpl userServices;
+    TorneoServices torneoServices;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> addNewUser(@RequestBody Usuario usuario){
+    public ResponseEntity<?> crearTorneo(@RequestBody Torneo torneo){
         try {
-            userServices.saveUsuario(usuario);
+            torneoServices.crearTorneo(torneo);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch ( Exception ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
         }
     }
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<?> getTorneo(){
+        try {
+            return new ResponseEntity<>(torneoServices.getTorneo(),HttpStatus.OK);
+        } catch ( Exception ex) {
+            Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+
 }

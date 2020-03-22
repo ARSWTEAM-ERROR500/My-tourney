@@ -17,9 +17,10 @@ public class Equipo {
     @JsonManagedReference
     private List<Jugador> jugadores;
     @ManyToOne
-    @JoinColumn(name="fk_torneo")
+    @JoinColumn(name="fk_torneo",nullable = false)
     private Torneo torneo;
     @OneToOne
+    @JoinColumn(name="fk_capitan",nullable = false)
     private Jugador capitan;
 
     public Equipo() {
