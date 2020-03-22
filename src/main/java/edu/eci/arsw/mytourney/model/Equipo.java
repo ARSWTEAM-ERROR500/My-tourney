@@ -66,4 +66,12 @@ public class Equipo {
         jugador.setEquipo(null);
         jugadores.remove(jugador);
     }
+
+    public Torneo getTorneo() {
+        return torneo;
+    }
+
+    public void setTorneo(Torneo torneo) {
+        this.torneo = torneo;
+    }
 }
