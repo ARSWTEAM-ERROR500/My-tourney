@@ -17,7 +17,7 @@ public class Jugador {
     private String nombre;
 
     @ManyToOne
-    @JoinColumn(name="fk_equipo",nullable = false)
+    @JoinColumn(name="fk_equipo")
     @JsonBackReference
     private Equipo equipo;
 

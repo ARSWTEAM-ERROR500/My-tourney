@@ -1,8 +1,6 @@
 package edu.eci.arsw.mytourney.controllers;
 
-import edu.eci.arsw.mytourney.model.Jugador;
 import edu.eci.arsw.mytourney.model.Usuario;
-import edu.eci.arsw.mytourney.persistence.MyTourneyException;
 import edu.eci.arsw.mytourney.services.impl.UserServicesImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
