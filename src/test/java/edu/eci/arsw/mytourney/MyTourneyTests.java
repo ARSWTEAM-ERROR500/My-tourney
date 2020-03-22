@@ -65,8 +65,8 @@ public class MyTourneyTests extends TestCase {
         }
     }
 
-    @Test
-    public void deberiaListarEquipos() {
-        List<Equipo> equipoList
-    }
+//    @Test
+//    public void deberiaListarEquipos() {
+//        List<Equipo> equipoList
+//    }
 }
