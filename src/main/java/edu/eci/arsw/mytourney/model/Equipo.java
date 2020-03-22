@@ -10,23 +10,35 @@ import java.util.List;
 public class Equipo {
     @Id
     private String nombre;
+
+
+
     @OneToMany(mappedBy = "equipo",cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Jugador> jugadores;
     @ManyToOne
-    @JoinColumn(name="fk_torneo")
+    @JoinColumn(name="fk_torneo",nullable = false)
     private Torneo torneo;
+    @OneToOne
+    @JoinColumn(name="fk_capitan",nullable = false)
+    private Jugador capitan;
 
     public Equipo() {
     }
-    public Equipo(String nombre,List<Jugador> jugadores){
-        this.nombre=nombre;
-        this.jugadores=jugadores;
-    }
 
-    public Equipo(String nombre){
+    public Equipo(String nombre,Jugador capitan){
         this.nombre=nombre;
         this.jugadores=new ArrayList<Jugador>();
+        jugadores.add(capitan);
+        this.capitan=capitan;
+    }
+
+    public Jugador getCapitan() {
+        return capitan;
+    }
+
+    public void setCapitan(Jugador capitan) {
+        this.capitan = capitan;
     }
 
     public String getNombre() {
@@ -53,5 +65,13 @@ public class Equipo {
     public void quitarJugador(Jugador jugador) {
         jugador.setEquipo(null);
         jugadores.remove(jugador);
+    }
+
+    public Torneo getTorneo() {
+        return torneo;
+    }
+
+    public void setTorneo(Torneo torneo) {
+        this.torneo = torneo;
     }
 }

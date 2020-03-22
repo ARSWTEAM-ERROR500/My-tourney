@@ -19,6 +19,8 @@ application {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile('org.springframework.boot:spring-boot-starter-web')
     compile group: 'org.webjars', name: 'webjars-locator', version: '0.14'
     compile group: 'org.webjars', name: 'bootstrap', version: '4.1.2'
@@ -29,7 +31,6 @@ dependencies {
     }
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('org.postgresql:postgresql')
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
 
     implementation('com.zaxxer:HikariCP:2.5.1') {
         exclude group: 'org.hibernate', module: 'hibernate-core'
@@ -40,5 +41,9 @@ dependencies {
         exclude group: 'com.zaxxer', module: 'HikariCP'
         exclude group: 'org.hibernate', module: 'hibernate-core'
     }
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+
 
 }

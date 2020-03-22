@@ -12,12 +12,15 @@ public class Jugador {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     @Column(name = "nombre",nullable = false,length = 255)
     private String nombre;
+
     @ManyToOne
     @JoinColumn(name="fk_equipo")
     @JsonBackReference
     private Equipo equipo;
+
     @OneToMany(mappedBy = "jugador",cascade = CascadeType.ALL)
     private List<Evento> estadisticas;
 
@@ -50,5 +53,13 @@ public class Jugador {
 
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
+    }
+
+    public List<Evento> getEstadisticas() {
+        return estadisticas;
+    }
+
+    public void setEstadisticas(List<Evento> estadisticas) {
+        this.estadisticas = estadisticas;
     }
 }
