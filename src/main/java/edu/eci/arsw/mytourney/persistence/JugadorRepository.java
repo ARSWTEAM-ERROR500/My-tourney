@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface JugadorRepository extends JpaRepository<Jugador,Integer> {
     List<Jugador> findByNombreEquals(String nombre);
+
 }
