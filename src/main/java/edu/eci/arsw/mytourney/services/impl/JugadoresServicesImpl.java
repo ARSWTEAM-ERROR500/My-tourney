@@ -26,15 +26,4 @@ public class JugadoresServicesImpl implements JugadoresServices {
         return jugador;
     }
 
-    @Override
-    public void registrarJugador(Jugador jugador) throws MyTourneyException {
-        jugadorRepository.save(jugador);
-    }
-
-    @Override
-    public void eliminarJugador(int id) throws MyTourneyException {
-        if (jugadorRepository.existsById(id)){
-            jugadorRepository.deleteById(id);
-        }
-    }
 }

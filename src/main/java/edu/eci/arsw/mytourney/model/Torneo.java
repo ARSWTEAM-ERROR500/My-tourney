@@ -16,9 +16,6 @@ public class Torneo {
     private String nombre;
 
     @OneToMany(mappedBy = "torneo",cascade = CascadeType.ALL)
-    private List<Equipo> equipos;
-
-    @OneToMany(mappedBy = "torneo",cascade = CascadeType.ALL)
     private List<Partido> partidos;
 
     @Column(nullable = false)
@@ -33,7 +30,6 @@ public class Torneo {
         this.nombre=nombre;
         this.maximoEquipos=maximoEquipos;
         this.limiteInscripcion=limiteInscripcion;
-        this.equipos=new ArrayList<Equipo>();
         this.partidos=new ArrayList<Partido>();
     }
 
@@ -56,14 +52,6 @@ public class Torneo {
     public int getId() {return id; }
 
     public void setId(int id) { this.id = id; }
-
-    public List<Equipo> getEquipos() {
-        return equipos;
-    }
-
-    public void setEquipos(List<Equipo> equipos) {
-        this.equipos = equipos;
-    }
 
     public List<Partido> getPartidos() {
         return partidos;

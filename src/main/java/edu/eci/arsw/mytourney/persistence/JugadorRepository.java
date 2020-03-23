@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface JugadorRepository extends JpaRepository<Jugador,Integer> {
-    List<Jugador> findByNombreEquals(String nombre);
+    Jugador findByEmail(String email);
 }

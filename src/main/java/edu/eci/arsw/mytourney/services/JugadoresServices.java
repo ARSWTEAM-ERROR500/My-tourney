@@ -10,9 +10,6 @@ public interface JugadoresServices {
 
     Jugador getJugador(int id) throws MyTourneyException;
 
-    void registrarJugador(Jugador jugador) throws MyTourneyException;
-
-    void eliminarJugador(int id)throws MyTourneyException;
 
 
 }

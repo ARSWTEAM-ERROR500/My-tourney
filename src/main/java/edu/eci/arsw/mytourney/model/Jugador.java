@@ -24,11 +24,23 @@ public class Jugador {
     @OneToMany(mappedBy = "jugador",cascade = CascadeType.ALL)
     private List<Evento> estadisticas;
 
+    @Column(nullable = false)
+    private String email;
+
     public Jugador() {
     }
-    public Jugador(String nombre){
+    public Jugador(String nombre,String email){
         this.nombre=nombre;
+        this.email=email;
         estadisticas=new LinkedList<Evento>();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getId() {

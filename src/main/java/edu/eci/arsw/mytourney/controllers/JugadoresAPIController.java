@@ -36,24 +36,4 @@ public class JugadoresAPIController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> addNewPlayer(@RequestBody Jugador newpl){
-        try {
-            jugadoresServices.registrarJugador(newpl);
-            return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch ( MyTourneyException ex) {
-            Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
-        }
-    }
-    @RequestMapping( path = "/{id}",method = RequestMethod.DELETE)
-    public ResponseEntity<?> deleteTeam(@PathVariable("id")int id){
-        try {
-            jugadoresServices.eliminarJugador(id);
-            return new ResponseEntity<>(HttpStatus.OK);
-        }catch (MyTourneyException ex){
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
-        }
-    }
-
 }

@@ -1,5 +1,6 @@
 package edu.eci.arsw.mytourney.controllers;
 
+import edu.eci.arsw.mytourney.exceptions.EquiposException;
 import edu.eci.arsw.mytourney.model.Equipo;
 import edu.eci.arsw.mytourney.model.Jugador;
 import edu.eci.arsw.mytourney.persistence.MyTourneyException;
@@ -31,7 +32,7 @@ public class EquiposAPIController {
     public ResponseEntity<?> getTeam(@PathVariable("nombre")String nombre){
         try {
             return new ResponseEntity<>(equiposServices.getEquipo(nombre),HttpStatus.OK);
-        }catch (MyTourneyException ex){
+        }catch (EquiposException ex){
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
@@ -40,7 +41,7 @@ public class EquiposAPIController {
         try {
             equiposServices.crearEquipo(newtm);
             return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch ( MyTourneyException ex) {
+        } catch ( EquiposException ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
         }
@@ -51,7 +52,7 @@ public class EquiposAPIController {
         try {
             equiposServices.eliminarEquipo(nombre);
             return new ResponseEntity<>(HttpStatus.OK);
-        }catch (MyTourneyException ex){
+        }catch (EquiposException ex){
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
@@ -61,7 +62,7 @@ public class EquiposAPIController {
         try {
             equiposServices.addPlayerToTeam(jugador,nombre);
             return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch ( MyTourneyException ex) {
+        } catch ( EquiposException ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
         }
@@ -71,10 +72,11 @@ public class EquiposAPIController {
         try {
             equiposServices.removePlayerFromTeam(jugador,nombre);
             return new ResponseEntity<>(HttpStatus.OK);
-        } catch ( MyTourneyException ex) {
+        } catch ( EquiposException ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
+
 }
 

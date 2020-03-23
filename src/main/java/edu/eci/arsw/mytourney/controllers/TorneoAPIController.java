@@ -1,5 +1,6 @@
 package edu.eci.arsw.mytourney.controllers;
 
+import edu.eci.arsw.mytourney.exceptions.TorneoException;
 import edu.eci.arsw.mytourney.model.Torneo;
 import edu.eci.arsw.mytourney.services.TorneoServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class TorneoAPIController {
         try {
             torneoServices.crearTorneo(torneo);
             return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch ( Exception ex) {
+        } catch ( TorneoException ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.CONFLICT);
         }
@@ -34,7 +35,7 @@ public class TorneoAPIController {
     public ResponseEntity<?> getTorneo(){
         try {
             return new ResponseEntity<>(torneoServices.getTorneo(),HttpStatus.OK);
-        } catch ( Exception ex) {
+        } catch ( TorneoException ex) {
             Logger.getLogger(EquiposAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }

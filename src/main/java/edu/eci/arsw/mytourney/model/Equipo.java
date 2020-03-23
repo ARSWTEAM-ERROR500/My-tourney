@@ -16,9 +16,6 @@ public class Equipo {
     @OneToMany(mappedBy = "equipo",cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Jugador> jugadores;
-    @ManyToOne
-    @JoinColumn(name="fk_torneo",nullable = false)
-    private Torneo torneo;
     @OneToOne
     @JoinColumn(name="fk_capitan",nullable = false)
     private Jugador capitan;
@@ -67,11 +64,4 @@ public class Equipo {
         jugadores.remove(jugador);
     }
 
-    public Torneo getTorneo() {
-        return torneo;
-    }
-
-    public void setTorneo(Torneo torneo) {
-        this.torneo = torneo;
-    }
 }

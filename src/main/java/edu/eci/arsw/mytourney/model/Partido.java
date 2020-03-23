@@ -38,6 +38,10 @@ public class Partido {
     @Column(nullable = false)
     private Date fechaInicio;
 
+    @ManyToOne
+    @JoinColumn(name = "fk_arbitro",nullable = false)
+    private Arbitro arbitro;
+
     public Partido() {
     }
 

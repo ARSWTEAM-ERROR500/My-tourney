@@ -1,5 +1,6 @@
 package edu.eci.arsw.mytourney.services.impl;
 
+import edu.eci.arsw.mytourney.exceptions.EquiposException;
 import edu.eci.arsw.mytourney.model.Equipo;
 import edu.eci.arsw.mytourney.model.Jugador;
 import edu.eci.arsw.mytourney.persistence.EquipoRepository;
@@ -21,27 +22,28 @@ public class EquiposServicesImpl implements EquiposServices {
 
 
     @Override
-    public Equipo getEquipo(String nombre) throws MyTourneyException {
-        Equipo equipo=null;
+    public Equipo getEquipo(String nombre) throws EquiposException {
         if(equipoRepository.existsById(nombre)){
-            equipo=equipoRepository.findById(nombre).get();
+            return equipoRepository.findById(nombre).get();
         }
-        return equipo;
+        else {
+            throw new EquiposException("El equipo no existe");
+        }
     }
 
     @Override
-    public List<Equipo> getEquipos() throws MyTourneyException {
+    public List<Equipo> getEquipos(){
         List<Equipo> equipos=equipoRepository.findAll();
         return equipos;
     }
 
     @Override
-    public void crearEquipo(Equipo equipo) throws MyTourneyException {
+    public void crearEquipo(Equipo equipo) throws EquiposException {
         equipoRepository.save(equipo);
     }
 
     @Override
-    public void addPlayerToTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+    public void addPlayerToTeam(Jugador jugador, String nombreEquipo) throws EquiposException {
         if(equipoRepository.existsById(nombreEquipo)){
             Equipo equipo= equipoRepository.findById(nombreEquipo).get();
             equipo.agregarJugador(jugador);
@@ -51,7 +53,7 @@ public class EquiposServicesImpl implements EquiposServices {
     }
 
     @Override
-    public void removePlayerFromTeam(Jugador jugador, String nombreEquipo) throws MyTourneyException {
+    public void removePlayerFromTeam(Jugador jugador, String nombreEquipo) throws EquiposException {
         if(equipoRepository.existsById(nombreEquipo) ){
             Equipo equipo= equipoRepository.findById(nombreEquipo).get();
             equipo.quitarJugador(jugador);
@@ -61,7 +63,7 @@ public class EquiposServicesImpl implements EquiposServices {
     }
 
     @Override
-    public void eliminarEquipo(String nombreEquipo) throws MyTourneyException {
+    public void eliminarEquipo(String nombreEquipo) throws EquiposException {
         if(equipoRepository.existsById(nombreEquipo)){
             equipoRepository.deleteById(nombreEquipo);
         }
